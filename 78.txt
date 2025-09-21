@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nossas Memórias 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.3);
+      border-radius: 25px;
+      width: 350px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h1 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .dias {
+      font-weight: bold;
+      color: #ffeb3b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="bruna.jfif" alt="Nossa Foto">
+    <div class="card-content">
+      <h1>💖 Nossas Memórias 💖</h1>
+      <p>Juntos desde 06/04/2024.</p>
+      <p>Já se passaram <span class="dias" id="dias">0</span> dias ao seu lado ❤️</p>
+      <p>Te amo muito, minha cebosa! 😘</p>
+      <p>Você é minha alegria, meu sorriso, meu aconchego e minha inspiração diária.</p>
+      <p>Cada momento contigo é especial e inesquecível 💕</p>
+      <p>Mal posso esperar por todos os dias que ainda vamos compartilhar juntos! 🌹</p>
+    </div>
+  </div>
+
+  <script>
+    // Calcula quantos dias juntos
+    const inicio = new Date("2024-04-06");
+    const hoje = new Date();
+    const diffTime = Math.abs(hoje - inicio);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("dias").textContent = diffDays;
+  </script>
+
+</body>
+</html>
